@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                font-family: 'Times New Roman', Times, serif;
+                background-color: #d7bea8;
+                color: black;
+                margin: 40px;
+
+            }
+
+        
+        
+        
+        
+        
+        </style>
+    
+    
+    <title> Ceaser Cipher</title>
+    
+    </head>
+    
+    <body>
+        <h1><strong>Ceaser Cipher</strong></h1>
+        <hr>
+        <p>Welcome to the Ceaser Cipher, you can encode or decode your message </p>
+        <br>
+        <form method="POST" action="/ceaser_cipher">
+            <input type ="text" name="message" placeholder="Message"><br><br>
+            <input type ="number" name="key" placeholder="Key"><br><br>
+            <select name="choice">
+                <option value="encrypt">Encrypt</option>
+                <option value="decrypt">Decrypt</option>
+             </select><br><br>
+             <input type="submit" value="Submit">
+             <br>
+        </form>
+        {% if result %}
+            <h3>Result:</h3>
+            <p>{{ result }}</p>
+        {% endif %}
+        <br>
+        <a href="/welcome">Main Menu</a>
+    </body>
+</html>

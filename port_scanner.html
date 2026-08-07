@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                font-family: 'Times New Roman', Times, serif;
+                background-color: #d7bea8;
+                color: black;
+                margin: 40px;
+
+            }
+
+            
+        </style>
+    
+    <title>Port scanner</title>
+    
+   </head>
+    <body>
+        <h1><strong>Port Scanner</strong></h1>
+        <hr>
+        <p>Welcome to the port scanner, here you can check weather ports are opened or closed</p>
+
+        <form method="POST" action="/port_scanner">
+            <input type="text" name="target" placeholder="Target"><br><br>
+            <input type="number" name="start_port" placeholder="Starting Port"><br><br>
+            <input type="number" name="end_port" placeholder=" Ending Port">
+            <input type="submit" value="Scan">
+           
+        </form>  
+            {% if results %}
+            <h3>Scan Results:</h3>
+            {% for row in results %}
+                <p>Open Ports: {{ row[0] }}</p>
+            {% endfor %}
+        {% endif %}
+        
+       
+    
+        <br>
+        <a href="/welcome">Main Menu</a>
+    </body>
+</html>

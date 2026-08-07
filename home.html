@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                font-family: 'Times New Roman', Times, serif;
+                background-color: #d7bea8;
+                color: black;
+                margin: 40px;
+            }
+            input{
+                padding: 10px;
+                margin-bottom: 10px;
+                border-radius: 5px;
+                border: 1px solid #744253;
+                background-color: white;
+                color: black;
+            }
+            input[type = "submit"] {
+                background-color: #744253;
+                color: white;
+                cursor: pointer;
+            }
+            .container{
+                max-width: 800px;
+                margin: 0 auto;
+            }
+
+            .card{
+                background-color: white;
+                border-radius: 10px;
+                padding: 20px;
+                margin-bottom: 30px;
+                border-left: 10px solid #744253
+
+            }
+
+            
+        </style>
+        <title>Cybersecurity Toolbox</title>
+    </head>
+
+    
+    <body>
+        <div class= "container">
+            <div class = "card">
+                <h1><strong>Cybersecurity ToolBox</strong></h1>
+                <p>Welcome to my Cybersecurity ToolBox, Please login or register to continue</p>
+                <hr>
+            
+                <form method="POST" action="/">
+                    <input type="text" name="username" placeholder="username"><br><br>
+                    <input type="password" name="password" placeholder="password"><br><br>
+                    <input type="submit" value="login">
+                    {% if error %}
+                         <p style="color: red;">{{ error }}</p>
+                    {% endif %}
+                </form>
+                <br>
+                <a href="/register">
+                    <input type="button" value="Register">
+                </a>
+                
+                </nav>
+            </div>
+        </div>
+    </body>
+    
+
+
+
+
+</html>

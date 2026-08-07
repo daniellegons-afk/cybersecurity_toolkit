@@ -1,10 +1,7 @@
 import socket
 
-def run_scanner():
-    target = input("please enter a target: ")
-    start_port = int(input("please enter a start port: "))
-    end_port = int(input("please enter a end port: "))
-    open_ports = []
+def run_scanner(target,start_port,end_port):
+    open_ports =[]
 
     for port in range(start_port, end_port + 1):
         sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
@@ -18,10 +15,4 @@ def run_scanner():
             print(f"The port {port} is closed")
         sock.close()
 
-    with open("scan_results.txt",  "w") as file:
-       for port in open_ports:     
-            file.write(f"{port}\n") 
-
-    with open ("scan_results.txt","r") as file:
-        content = file.read()
-        print(content)  
+    return open_ports

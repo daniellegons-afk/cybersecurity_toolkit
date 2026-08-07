@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style>
+            body{
+                font-family: 'Times New Roman', Times, serif;
+                background-color: #d7bea8;
+                color: black;
+                margin: 40px;
+
+            }
+            input{
+                padding: 10px;
+                margin-bottom: 10px;
+                border-radius: 5px;
+                border: 1px solid #744253;
+                background-color: white;
+                color: black;
+
+            }
+
+        </style>
+        <title>Register</title>
+    </head>
+    <body>
+        <h1><strong>Register</strong></h1>
+        <hr>
+        <form method = "POST" action="/register">
+            <input type="text" name="username" placeholder="username"><br><br>
+            <input type="password" name="password" placeholder="password"><br><br>
+            <input type="password" name="confirm password" placeholder="confirm password"><br><br>
+            <input type="submit" value="Create Account">
+        </form>
+    </body>
+</html>

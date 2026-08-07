@@ -1,9 +1,11 @@
 import string
 import random
 
-def run_password_genrator():
-    length = int(input("How long should each password be? "))
-    quantity = int(input("How many passwords do you want? "))
+
+
+
+
+def run_password_genrator(length, quantity):
     
     characters = string.ascii_letters + string.digits + string.punctuation
     passwords = []
@@ -14,7 +16,6 @@ def run_password_genrator():
             password += random.choice(characters)
         passwords.append(password)
 
-    with open("passwords.txt", "w") as file:
-        for password in passwords:
-            print(password)
-            file.write(password + "\n")
+    return passwords
+
+    
