@@ -7,7 +7,7 @@ import hashlib
 import sqlite3
 
 app = Flask(__name__)
-app.secret_key = "your_secret_key"
+app.secret_key = ""
 
 def create_table():
     conn = sqlite3.connect("users.db")
