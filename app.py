@@ -40,7 +40,7 @@ def create_table():
 def create_admin():
     conn = sqlite3.connect("users.db")
     cursor = conn.cursor()
-    hashed = hashlib.sha256("admin123".encode()).hexdigest()
+    hashed = hashlib.sha256("".encode()).hexdigest()
     try:
         cursor.execute("""
         INSERT INTO users (username, password, role)
